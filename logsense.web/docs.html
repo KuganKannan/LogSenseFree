@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LogSense Documentation</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+body{
+font-family:'Inter',sans-serif;
+background:#0f172a;
+color:white;
+margin:0;
+}
+
+.docs-container{
+max-width:900px;
+margin:auto;
+padding:100px 20px;
+}
+
+.docs-container h1{
+font-size:48px;
+margin-bottom:30px;
+}
+
+.docs-container h2{
+margin-top:40px;
+margin-bottom:15px;
+}
+
+.docs-container p{
+color:#cbd5e1;
+line-height:1.7;
+}
+
+.docs-container pre{
+background:#020617;
+padding:20px;
+border-radius:12px;
+margin-top:15px;
+overflow:auto;
+color:#22c55e;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+LogSense
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="downloads.html">Downloads</a>
+<a href="docs.html">Docs</a>
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<div class="docs-container">
+
+<h1>LogSense Documentation</h1>
+
+<p>
+LogSense is a developer tool designed to analyze log files and help engineers quickly understand system failures.
+Instead of manually reading thousands of log lines, LogSense automatically highlights the most important errors and
+builds a timeline of failures.
+</p>
+
+
+<h2>Getting Started</h2>
+
+<p>Download the LogSense desktop application from the downloads page and launch the program.</p>
+
+<pre>
+LogSense.exe
+</pre>
+
+
+<h2>Opening Logs</h2>
+
+<p>Click the <strong>Open Log</strong> button in the top navigation bar and select a log file.</p>
+
+<pre>
+Supported file types
+
+.log
+.txt
+</pre>
+
+
+<h2>Understanding the Report</h2>
+
+<p>Once a log file is loaded, LogSense generates an incident report.</p>
+
+<pre>
+LOGSENSE INCIDENT REPORT
+--------------------------------
+
+Lines scanned: 12043
+Errors found: 245
+
+Root Cause Candidate
+DatabaseTimeoutException
+
+Timeline
+2026-03-10 10:21:05 → DatabaseTimeoutException
+2026-03-10 10:21:07 → APIServiceException
+
+Top Issues
+1. DatabaseTimeoutException -> 117
+2. APIServiceException -> 82
+</pre>
+
+
+<h2>Root Cause Candidate</h2>
+
+<p>
+The root cause candidate is the earliest detected error in the timeline.
+This is often the event that triggered a cascade of failures.
+</p>
+
+
+<h2>Timeline</h2>
+
+<p>
+The timeline shows the order in which errors occurred so developers can understand how a failure propagated
+through the system.
+</p>
+
+
+<h2>Top Issues</h2>
+
+<p>
+The top issues section highlights the most frequent errors in the log file.
+</p>
+
+
+<h2>Supported Log Indicators</h2>
+
+<pre>
+ERROR
+Exception
+Traceback
+</pre>
+
+</div>
+
+<footer>
+
+LogSense — Find the signal in the noise
+
+</footer>
+
+</body>
+
+</html>
