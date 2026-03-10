@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LogSense Pricing</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+.pricing-page{
+max-width:1000px;
+margin:auto;
+padding:120px 20px;
+text-align:center;
+}
+
+.pricing-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+margin-top:60px;
+}
+
+.pricing-card{
+background:#020617;
+padding:40px;
+border-radius:14px;
+transition:transform 0.2s ease;
+}
+
+.pricing-card:hover{
+transform:translateY(-8px);
+}
+
+.pricing-card h3{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.price{
+font-size:40px;
+font-weight:700;
+color:#6366f1;
+margin-bottom:10px;
+}
+
+.price small{
+font-size:16px;
+color:#94a3b8;
+}
+
+.pricing-card ul{
+list-style:none;
+padding:0;
+margin:20px 0;
+}
+
+.pricing-card li{
+margin:10px 0;
+color:#cbd5e1;
+}
+
+.featured{
+border:2px solid #6366f1;
+}
+
+.toggle{
+margin-top:30px;
+}
+
+.toggle button{
+padding:10px 20px;
+border:none;
+background:#334155;
+color:white;
+margin:5px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.toggle button.active{
+background:#6366f1;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+LogSense
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="pricing.html">Pricing</a>
+<a href="docs.html">Docs</a>
+<a href="downloads.html">Downloads</a>
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="pricing-page">
+
+<h1>Pricing</h1>
+
+<p style="color:#94a3b8;">
+Simple pricing for developers.
+</p>
+
+
+<div class="toggle">
+
+<button id="monthlyBtn" class="active">Monthly</button>
+<button id="annualBtn">Annual</button>
+
+</div>
+
+
+<div class="pricing-grid">
+
+<div class="pricing-card">
+
+<h3>Free</h3>
+
+<div class="price">₹0</div>
+
+<ul>
+<li>Local log analysis</li>
+<li>Error clustering</li>
+<li>Incident timeline</li>
+<li>Desktop application</li>
+<li>Open source</li>
+</ul>
+
+<a href="downloads.html" class="btn secondary">
+Download
+</a>
+
+</div>
+
+
+<div class="pricing-card featured">
+
+<h3>Pro</h3>
+
+<div class="price">
+
+<span class="monthly">₹100 <small>/month</small></span>
+<span class="annual">₹1000 <small>/year</small></span>
+
+</div>
+
+<ul>
+<li>IDE integration</li>
+<li>Advanced root cause analysis</li>
+<li>Real-time monitoring</li>
+<li>Team collaboration</li>
+<li>Priority updates</li>
+</ul>
+
+<a href="LogSensePro.zip" class="btn primary">
+Buy Pro
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+LogSense — Find the signal in the noise
+
+</footer>
+
+
+<script>
+
+const monthlyBtn = document.getElementById("monthlyBtn")
+const annualBtn = document.getElementById("annualBtn")
+
+const monthly = document.querySelector(".monthly")
+const annual = document.querySelector(".annual")
+
+annual.style.display = "none"
+
+monthlyBtn.onclick = () => {
+
+monthly.style.display = "block"
+annual.style.display = "none"
+
+monthlyBtn.classList.add("active")
+annualBtn.classList.remove("active")
+
+}
+
+annualBtn.onclick = () => {
+
+monthly.style.display = "none"
+annual.style.display = "block"
+
+annualBtn.classList.add("active")
+monthlyBtn.classList.remove("active")
+
+}
+
+</script>
+
+
+</body>
+
+</html>
