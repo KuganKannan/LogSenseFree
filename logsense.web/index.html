@@ -16,7 +16,6 @@
 <body>
 
 <header>
-
 <div class="container">
 
 <nav>
@@ -24,13 +23,9 @@
 <div class="logo">
 
 <svg width="34" height="34" viewBox="0 0 100 100">
-
 <rect width="100" height="100" rx="20" fill="#6366F1"/>
-
 <path d="M25 50 L45 65 L45 35 Z" fill="white"/>
-
 <rect x="55" y="60" width="20" height="6" fill="white"/>
-
 </svg>
 
 <span>LogSense</span>
@@ -38,17 +33,15 @@
 </div>
 
 <div class="nav-links">
-
-<a href="#">Features</a>
-<a href="#">Docs</a>
+<a href="#features">Features</a>
+<a href="#developers">Developers</a>
+<a href="#about">About</a>
 <a href="#">GitHub</a>
-
 </div>
 
 </nav>
 
 </div>
-
 </header>
 
 <section class="hero">
@@ -58,15 +51,13 @@
 <h1>Understand Your Logs Instantly</h1>
 
 <p>
-LogSense analyzes massive log files, detects recurring failures,
-and surfaces the root cause of system issues in seconds.
+LogSense helps developers analyze massive log files, detect recurring failures,
+and identify the root cause of system issues in seconds.
 </p>
 
 <div class="buttons">
-
 <a class="btn primary">Get Started</a>
 <a class="btn secondary">View on GitHub</a>
-
 </div>
 
 <div class="code">
@@ -89,7 +80,6 @@ Top Issues
 </div>
 
 </div>
-
 </section>
 
 <section class="section">
@@ -118,10 +108,9 @@ Top Issues
 </div>
 
 </div>
-
 </section>
 
-<section class="section">
+<section class="section" id="features">
 
 <div class="container">
 
@@ -152,21 +141,54 @@ Top Issues
 </div>
 
 </div>
-
 </section>
 
-<section class="cta">
+<section class="section" id="developers">
 
 <div class="container">
 
-<h2>Start Understanding Your Logs Today</h2>
+<h2 class="section-title">Built for Developers</h2>
 
-<p>Install LogSense and analyze your logs in seconds.</p>
+<div class="grid usage">
 
-<div class="buttons">
+<div class="usage-card">
 
-<a class="btn primary">Install LogSense</a>
-<a class="btn secondary">View Documentation</a>
+
+
+<h3>Debug Production Issues</h3>
+
+<p>
+Quickly analyze production logs and identify recurring
+errors without manually scanning thousands of lines.
+</p>
+
+</div>
+
+<div class="usage-card">
+
+
+
+<h3>Microservices Observability</h3>
+
+<p>
+Understand how failures propagate across distributed services
+and identify common failure patterns instantly.
+</p>
+
+</div>
+
+<div class="usage-card">
+
+
+
+<h3>Faster Incident Resolution</h3>
+
+<p>
+During production incidents, LogSense highlights the most
+critical failures so teams can resolve issues faster.
+</p>
+
+</div>
 
 </div>
 
@@ -178,29 +200,70 @@ Top Issues
 
 <div class="container">
 
+<h2 class="section-title">Developer Workflow</h2>
+
+<div class="workflow">
+
+<div class="workflow-step">
+<h3>1. Collect Logs</h3>
+<p>Export logs from your application, container, or server.</p>
+</div>
+
+<div class="workflow-step">
+<h3>2. Run LogSense</h3>
+<p>Analyze logs instantly using the CLI.</p>
+</div>
+
+<div class="workflow-step">
+<h3>3. Identify Root Cause</h3>
+<p>Get a concise summary of the most critical failures.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<h2>Start Understanding Your Logs Today</h2>
+
+<p>Install LogSense and analyze your logs in seconds.</p>
+
+<div class="buttons">
+<a class="btn primary">Install LogSense</a>
+<a class="btn secondary">View Documentation</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="about">
+
+<div class="container">
+
 <h2 class="section-title">About the Developer</h2>
 
 <div class="about">
 
 <p>
-LogSense is developed by <strong>Kugan</strong>, a software developer passionate about building tools that make
-developers more productive.
+LogSense is developed by <strong>Kugan</strong>, a developer passionate
+about building tools that improve developer productivity.
 </p>
 
 <p>
-While working with large applications and complex systems, Kugan noticed how difficult it can be to diagnose
-issues hidden inside massive log files. Developers often spend hours searching through logs to identify the
-root cause of failures.
+After repeatedly facing the challenge of debugging large-scale systems,
+Kugan built LogSense to help engineers quickly extract insights from
+complex log data.
 </p>
 
 <p>
-LogSense was created to solve this problem by automatically analyzing logs, grouping errors, and helping
-developers quickly understand what is going wrong in their systems.
-</p>
-
-<p>
-The project was inspired through discussions with experienced engineers, including Kugan’s uncle
-<strong>Ramki Balakrishnan</strong>, who works in large-scale distributed systems.
+The project was inspired by discussions with experienced engineers,
+including his uncle <strong>Ramki Balakrishnan</strong>, who works in
+distributed systems engineering.
 </p>
 
 </div>
@@ -224,14 +287,12 @@ The project was inspired through discussions with experienced engineers, includi
 <p>Main Developer of LogSense</p>
 
 <p>
-Focused on building developer tools and observability solutions
-that help engineers debug systems faster.
+Focused on building developer tools and observability systems
+that simplify debugging and system understanding.
 </p>
 
 <div class="dev-links">
-
 <a href="https://github.com/KuganKannan">GitHub</a>
-
 </div>
 
 </div>
@@ -239,6 +300,12 @@ that help engineers debug systems faster.
 </div>
 
 </section>
+
+<h1>Understand Your Logs Instantly</h1>
+
+<p class="hero-slogan">
+For Developers. By Developers.
+</p>
 
 <footer>
 
@@ -248,5 +315,5 @@ LogSense — Find the signal in the noise
 </footer>
 
 </body>
-
+<script src="script.js"></script>
 </html>

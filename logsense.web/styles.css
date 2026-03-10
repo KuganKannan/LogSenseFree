@@ -206,3 +206,101 @@ text-decoration:none;
 .dev-links a:hover{
 text-decoration:underline;
 }
+
+/* IMAGE CARDS */
+
+.usage-card{
+background:#020617;
+border-radius:12px;
+overflow:hidden;
+transition:transform 0.3s;
+}
+
+.usage-card:hover{
+transform:translateY(-6px);
+}
+
+.usage-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.usage-card h3{
+padding:20px 20px 0;
+}
+
+.usage-card p{
+padding:0 20px 20px;
+color:#94a3b8;
+}
+
+/* WORKFLOW */
+
+.workflow{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.workflow-step{
+background:#020617;
+padding:30px;
+border-radius:12px;
+}
+
+/* DEVELOPER PHOTO */
+
+.developer-photo{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+border:3px solid #6366f1;
+}
+
+.hero-slogan{
+
+font-size:20px;
+font-weight:700;
+margin-top:15px;
+letter-spacing:1px;
+
+/* gradient developer text */
+
+background:linear-gradient(
+90deg,
+#6366f1,
+#8b5cf6,
+#06b6d4
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+/* animation */
+
+background-size:200%;
+animation:sloganGlow 4s ease infinite;
+
+}
+
+
+/* glowing animation */
+
+@keyframes sloganGlow{
+
+0%{
+background-position:0%;
+}
+
+50%{
+background-position:100%;
+}
+
+100%{
+background-position:0%;
+}
+
+}
