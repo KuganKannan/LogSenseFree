@@ -43,9 +43,6 @@ class LogSenseGUI:
 
         self.build_layout()
 
-    # -----------------------
-    # MAIN LAYOUT
-    # -----------------------
 
     def build_layout(self):
 
