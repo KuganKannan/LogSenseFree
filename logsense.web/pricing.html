@@ -1,40 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>LogSense Pricing</title>
 
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:'Inter',sans-serif;
+background:#020617;
+color:#e2e8f0;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(2,6,23,0.9);
+backdrop-filter:blur(10px);
+border-bottom:1px solid #1e293b;
+z-index:100;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:18px 20px;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+color:#6366f1;
+}
+
+.nav-links a{
+margin-left:24px;
+text-decoration:none;
+color:#cbd5f5;
+font-size:14px;
+}
+
+.nav-links a:hover{
+color:white;
+}
+
+.hero{
+padding-top:160px;
+text-align:center;
+max-width:700px;
+margin:auto;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:16px;
+}
+
+.hero p{
+color:#94a3b8;
+font-size:18px;
+}
 
 .pricing-page{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
-padding:120px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
 .pricing-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:40px;
 margin-top:60px;
 }
 
 .pricing-card{
 background:#020617;
-padding:40px;
-border-radius:14px;
-transition:transform 0.2s ease;
+border:1px solid #1e293b;
+padding:45px 40px;
+border-radius:16px;
+transition:all .25s ease;
+position:relative;
 }
 
 .pricing-card:hover{
 transform:translateY(-8px);
+border-color:#6366f1;
+box-shadow:0 20px 40px rgba(0,0,0,.6);
 }
 
 .pricing-card h3{
@@ -43,96 +107,133 @@ margin-bottom:10px;
 }
 
 .price{
-font-size:40px;
+font-size:44px;
 font-weight:700;
 color:#6366f1;
-margin-bottom:10px;
+margin-bottom:14px;
 }
 
 .price small{
-font-size:16px;
+font-size:15px;
 color:#94a3b8;
+}
+
+.pricing-card p{
+color:#94a3b8;
+font-size:15px;
+margin-bottom:20px;
 }
 
 .pricing-card ul{
 list-style:none;
 padding:0;
-margin:20px 0;
+margin:25px 0;
+text-align:left;
 }
 
 .pricing-card li{
-margin:10px 0;
+margin:12px 0;
 color:#cbd5e1;
+font-size:15px;
 }
 
 .featured{
 border:2px solid #6366f1;
+background:linear-gradient(180deg,#020617,#030b2a);
 }
 
-.toggle{
-margin-top:30px;
-}
-
-.toggle button{
-padding:10px 20px;
-border:none;
-background:#334155;
-color:white;
-margin:5px;
-border-radius:6px;
-cursor:pointer;
-}
-
-.toggle button.active{
+.badge{
+position:absolute;
+top:-14px;
+left:50%;
+transform:translateX(-50%);
 background:#6366f1;
+color:white;
+font-size:12px;
+padding:6px 12px;
+border-radius:999px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 26px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+margin-top:10px;
+cursor:pointer;
+font-size:14px;
+}
+
+.primary{
+background:#6366f1;
+color:white;
+border:none;
+}
+
+.primary:hover{
+background:#4f46e5;
+}
+
+.secondary{
+border:1px solid #334155;
+color:#e2e8f0;
+}
+
+.secondary:hover{
+border-color:#6366f1;
+}
+
+.testimonial{
+margin-top:90px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+font-size:18px;
+color:#cbd5e1;
+}
+
+.testimonial span{
+display:block;
+margin-top:10px;
+font-size:14px;
+color:#64748b;
+}
+
+footer{
+text-align:center;
+padding:40px 20px;
+border-top:1px solid #1e293b;
+margin-top:80px;
+color:#64748b;
+font-size:14px;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 <div class="container">
-
 <nav>
-
-<div class="logo">
-LogSense
-</div>
-
+<div class="logo">LogSense</div>
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="pricing.html">Pricing</a>
 <a href="docs.html">Docs</a>
 <a href="downloads.html">Downloads</a>
 </div>
-
 </nav>
-
 </div>
-
 </header>
 
+<section class="hero">
+<h1>Stop Reading Logs.<br>Start Understanding Them.</h1>
+<p>LogSense helps developers turn thousands of log lines into clear insights in seconds.</p>
+</section>
 
 <section class="pricing-page">
-
-<h1>Pricing</h1>
-
-<p style="color:#94a3b8;">
-Simple pricing for developers.
-</p>
-
-
-<div class="toggle">
-
-<button id="monthlyBtn" class="active">Monthly</button>
-<button id="annualBtn">Annual</button>
-
-</div>
-
 
 <div class="pricing-grid">
 
@@ -142,6 +243,8 @@ Simple pricing for developers.
 
 <div class="price">₹0</div>
 
+<p>Perfect for solo developers exploring LogSense.</p>
+
 <ul>
 <li>Local log analysis</li>
 <li>Error clustering</li>
@@ -150,83 +253,59 @@ Simple pricing for developers.
 <li>Open source</li>
 </ul>
 
-<a href="downloads.html" class="btn secondary">
-Download
-</a>
+<a href="downloads.html" class="btn secondary">Download</a>
 
 </div>
-
 
 <div class="pricing-card featured">
 
+<div class="badge">Most Popular</div>
+
 <h3>Pro</h3>
 
-<div class="price">
+<div class="price">₹2500 <small>one-time</small></div>
 
-<span class="monthly">₹100 <small>/month</small></span>
-<span class="annual">₹1000 <small>/year</small></span>
-
-</div>
+<p>The upgrade every serious developer eventually buys.</p>
 
 <ul>
-<li>IDE integration</li>
-<li>Advanced root cause analysis</li>
-<li>Real-time monitoring</li>
-<li>Team collaboration</li>
-<li>Priority updates</li>
+<li>⚡ IDE integration</li>
+<li>🧠 Advanced root cause analysis</li>
+<li>📡 Real-time monitoring</li>
+<li>👥 Team collaboration</li>
+<li>🚀 Priority updates</li>
 </ul>
 
-<a href="LogSensePro.zip" class="btn primary">
-Buy Pro
-</a>
+<p style="font-size:14px;color:#94a3b8">If debugging logs is part of your workflow, LogSense Pro might be the best ₹2500 you ever spend.</p>
+
+<!-- Updated Buy Pro button -->
+<button id="payBtn" class="btn primary">Buy Pro</button>
 
 </div>
 
+</div>
+
+<div class="testimonial">
+"LogSense cut our debugging time from hours to minutes. We can't imagine working without it now." 
+<span>— Early LogSense Pro user</span>
 </div>
 
 </section>
 
-
 <footer>
-
 LogSense — Find the signal in the noise
-
 </footer>
 
-
+<!-- Download script -->
 <script>
-
-const monthlyBtn = document.getElementById("monthlyBtn")
-const annualBtn = document.getElementById("annualBtn")
-
-const monthly = document.querySelector(".monthly")
-const annual = document.querySelector(".annual")
-
-annual.style.display = "none"
-
-monthlyBtn.onclick = () => {
-
-monthly.style.display = "block"
-annual.style.display = "none"
-
-monthlyBtn.classList.add("active")
-annualBtn.classList.remove("active")
-
-}
-
-annualBtn.onclick = () => {
-
-monthly.style.display = "none"
-annual.style.display = "block"
-
-annualBtn.classList.add("active")
-monthlyBtn.classList.remove("active")
-
-}
-
+document.getElementById("payBtn").addEventListener("click", function() {
+    const link = document.createElement("a");
+    link.href = "LogSEnsePro.zip"; // Make sure this file is in the same folder
+    link.download = "LogSEnsePro.zip";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
 </script>
 
-
 </body>
-
 </html>

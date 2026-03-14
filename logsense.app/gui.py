@@ -25,7 +25,7 @@ def resource_path(relative_path):
 
 class LogSenseGUI:
 
-    def __init__(self, root):
+    def __init__(self, root):                                                                                                                                                                       
 
         self.root = root
         self.root.title("LogSense")
