@@ -1,324 +1,104 @@
-```html
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About — LogSense</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-margin:0;
-font-family:'Inter',sans-serif;
-background:#020617;
-color:#e2e8f0;
-padding-top:90px;
-}
-
-/* Layout */
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:0 20px;
-}
-
-/* Navbar */
-
-header{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(2,6,23,0.85);
-backdrop-filter:blur(12px);
-border-bottom:1px solid #1e293b;
-z-index:1000;
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 0;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:600;
-font-size:18px;
-}
-
-.nav-links a{
-color:#cbd5e1;
-text-decoration:none;
-margin-left:26px;
-font-size:14px;
-position:relative;
-}
-
-.nav-links a:hover{
-color:white;
-}
-
-.nav-links a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-6px;
-width:0%;
-height:2px;
-background:#6366f1;
-transition:width .25s;
-}
-
-.nav-links a:hover::after{
-width:100%;
-}
-
-/* Hero */
-
-.hero{
-text-align:center;
-padding:120px 0 60px 0;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:700px;
-margin:auto;
-color:#94a3b8;
-font-size:18px;
-}
-
-/* Sections */
-
-.section{
-padding:80px 0;
-}
-
-.section-title{
-text-align:center;
-font-size:32px;
-margin-bottom:50px;
-}
-
-/* Cards */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.card{
-border:1px solid #1e293b;
-padding:28px;
-border-radius:12px;
-background:#020617;
-}
-
-/* Developer card */
-
-.developer-card{
-max-width:420px;
-margin:auto;
-text-align:center;
-border:1px solid #1e293b;
-padding:30px;
-border-radius:14px;
-background:#020617;
-}
-
-.developer-photo{
-width:140px;
-height:140px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:20px;
-}
-
-.dev-links a{
-display:inline-block;
-margin-top:15px;
-color:#6366f1;
-text-decoration:none;
-font-weight:500;
-}
-
-/* Footer */
-
-footer{
-text-align:center;
-padding:50px 0;
-border-top:1px solid #1e293b;
-color:#64748b;
-margin-top:60px;
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | LogSense</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <header class="navbar-wrap">
+    <div class="container">
+      <nav class="navbar-shell">
+        <a class="brand-mark" href="index.html" aria-label="LogSense home">
+          <img src="assets/logo.svg" class="brand-logo" alt="LogSense logo">
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="docs.html">Docs</a>
+          <a href="downloads.html">Downloads</a>
+          <a href="blog.html">Blog</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contactus.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<header>
-<div class="container">
+  <main>
+    <section class="page-hero reveal">
+      <div class="container">
+        <h1>What is <span class="hero-glow">LogSense</span>?</h1>
+        <p>LogSense is an AI log analysis platform that helps developers move from raw data to root cause with speed and confidence.</p>
+      </div>
+    </section>
 
-<nav>
+    <section class="section reveal">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-12 col-lg-7">
+            <article class="glass-card h-100">
+              <h2 class="mb-3">Why LogSense is useful</h2>
+              <p class="muted">Teams lose hours digging through repetitive traces. LogSense auto-groups related failures, highlights probable origin points, and surfaces the context you need to fix issues faster.</p>
+              <p class="muted mb-0">From microservices to monoliths, it provides a clear diagnostic story: what failed first, what cascaded, and what to address now.</p>
+            </article>
+          </div>
+          <div class="col-12 col-lg-5">
+            <article class="glass-card h-100">
+              <h2 class="mb-3">Mission</h2>
+              <p class="muted mb-0">Make debugging calmer, faster, and more reliable by giving every engineer an intelligent lens into system behavior.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="logo">
+    <section class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Feature Highlights</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <article class="glass-card h-100">
+              <div class="icon-badge"><i class="bi bi-activity"></i></div>
+              <h3 class="feature-title">Signal-First Timeline</h3>
+              <p class="muted mb-0">See the event chain clearly with confidence markers and chronological context.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-4">
+            <article class="glass-card h-100">
+              <div class="icon-badge"><i class="bi bi-file-earmark-text"></i></div>
+              <h3 class="feature-title">Smart Log Summaries</h3>
+              <p class="muted mb-0">Auto-summarize long outputs into concise issue clusters and probable triggers.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-4">
+            <article class="glass-card h-100">
+              <div class="icon-badge"><i class="bi bi-lightning-charge"></i></div>
+              <h3 class="feature-title">Faster Fix Cycles</h3>
+              <p class="muted mb-0">Spend less time searching and more time resolving high-impact incidents.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<svg width="34" height="34" viewBox="0 0 100 100">
-<rect width="100" height="100" rx="20" fill="#6366F1"/>
-<path d="M25 50 L45 65 L45 35 Z" fill="white"/>
-<rect x="55" y="60" width="20" height="6" fill="white"/>
-</svg>
+  <footer class="footer-wrap">
+    <div class="container">
+      <a class="footer-brand" href="index.html" aria-label="LogSense home">
+        <img src="assets/logo.svg" class="footer-logo" alt="LogSense logo">
+      </a>
+      <p class="mb-1">AI-Powered Log Analysis</p>
+      <p class="mb-0">LogSense &copy; 2026. Understand Your Logs Instantly.</p>
+    </div>
+  </footer>
 
-<span>LogSense</span>
-
-</div>
-
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="pricing.html">Pricing</a>
-<a href="docs.html">Docs</a>
-<a href="downloads.html">Downloads</a>
-<a href="about.html">About</a>
-</div>
-
-</nav>
-
-</div>
-</header>
-
-
-<section class="hero">
-
-<div class="container">
-
-<h1>About LogSense</h1>
-
-<p>
-LogSense is a developer tool designed to help engineers understand
-massive log files quickly and identify the root cause of system issues.
-</p>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<div class="container">
-
-<h2 class="section-title">The Problem</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Too Many Logs</h3>
-<p>
-Modern systems generate huge amounts of logs every second.
-Finding useful information inside them can be extremely difficult.
-</p>
-</div>
-
-<div class="card">
-<h3>Repeated Errors</h3>
-<p>
-The same stack trace may appear thousands of times,
-making debugging slow and frustrating.
-</p>
-</div>
-
-<div class="card">
-<h3>Hidden Root Causes</h3>
-<p>
-The first failure is often buried inside millions of lines
-of logs.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<div class="container">
-
-<h2 class="section-title">The Idea Behind LogSense</h2>
-
-<p style="max-width:700px;margin:auto;color:#94a3b8;text-align:center;line-height:1.6;">
-
-LogSense was built to help developers quickly extract insights
-from large log datasets. Instead of manually reading through
-thousands of lines, LogSense analyzes patterns, clusters
-errors, and highlights the most important issues.
-
-The goal is simple:  
-<strong>turn overwhelming logs into clear insights.</strong>
-
-</p>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<div class="container">
-
-<h2 class="section-title">Meet the Creator</h2>
-
-<div class="developer-card">
-
-<img src="assets/kugan.jpg" class="developer-photo">
-
-<h3>Kugan</h3>
-
-<p>Main Developer of LogSense</p>
-
-<p>
-Passionate about building developer tools and improving
-observability systems.
-</p>
-
-<div class="dev-links">
-<a href="https://github.com/KuganKannan">GitHub</a>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-LogSense — Find the signal in the noise  
-© 2026 LogSense
-
-</footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
-```

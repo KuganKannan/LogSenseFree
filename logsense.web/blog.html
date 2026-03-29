@@ -1,297 +1,166 @@
-```html
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>LogSense Blog</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-margin:0;
-font-family:'Inter',sans-serif;
-background:#020617;
-color:#e2e8f0;
-padding-top:90px;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-padding:0 20px;
-}
-
-/* Navbar */
-
-header{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(2,6,23,0.9);
-backdrop-filter:blur(12px);
-border-bottom:1px solid #1e293b;
-z-index:1000;
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 0;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:600;
-font-size:18px;
-}
-
-.nav-links a{
-color:#cbd5e1;
-text-decoration:none;
-margin-left:24px;
-font-size:14px;
-position:relative;
-}
-
-.nav-links a:hover{
-color:white;
-}
-
-.nav-links a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-6px;
-width:0%;
-height:2px;
-background:#6366f1;
-transition:.25s;
-}
-
-.nav-links a:hover::after{
-width:100%;
-}
-
-/* Blog header */
-
-.blog-header{
-text-align:center;
-padding:80px 0 40px 0;
-}
-
-.blog-header h1{
-font-size:42px;
-margin-bottom:10px;
-}
-
-.blog-header p{
-color:#94a3b8;
-}
-
-/* Blog post */
-
-.post{
-border:1px solid #1e293b;
-background:#020617;
-padding:40px;
-border-radius:14px;
-margin-bottom:40px;
-box-shadow:0 10px 40px rgba(0,0,0,0.4);
-}
-
-.post-title{
-font-size:30px;
-margin-bottom:10px;
-}
-
-.post-meta{
-color:#94a3b8;
-font-size:14px;
-margin-bottom:25px;
-}
-
-.post p{
-line-height:1.7;
-color:#cbd5e1;
-margin-bottom:20px;
-}
-
-/* Footer */
-
-footer{
-text-align:center;
-padding:50px 0;
-border-top:1px solid #1e293b;
-color:#64748b;
-margin-top:60px;
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | LogSense</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <header class="navbar-wrap">
+    <div class="container">
+      <nav class="navbar-shell">
+        <a class="brand-mark" href="index.html" aria-label="LogSense home">
+          <img src="assets/logo.svg" class="brand-logo" alt="LogSense logo">
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="docs.html">Docs</a>
+          <a href="downloads.html">Downloads</a>
+          <a href="blog.html" class="active">Blog</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contactus.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<header>
+  <main>
+    <section class="page-hero reveal">
+      <div class="container">
+        <h1><span class="hero-glow">LogSense Engineering Blog</span></h1>
+        <p>Practical guides and real debugging insights for teams building reliable systems at scale.</p>
+      </div>
+    </section>
 
-<div class="container">
+    <section class="section reveal">
+      <div class="container">
+        <article class="glass-card featured-post mb-4">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-lg-8">
+              <div class="tag-list mb-3"><span class="tag"><i class="bi bi-stars"></i> Featured</span><span class="tag"><i class="bi bi-cpu"></i> AI</span></div>
+              <h2 class="mb-3">How to Debug Faster Using AI Log Analysis</h2>
+              <p class="muted mb-4">Discover a practical AI-first debugging workflow that helps your team reduce incident triage time and focus on verified fixes faster.</p>
+              <a href="blog-debug-faster-ai.html" class="btn-primary-glow">Read More <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="code-block">AI + logs + timeline
 
-<nav>
+Signal detection
+Root cause ranking
+Actionable fix path</div>
+            </div>
+          </div>
+        </article>
 
-<div class="logo">
+        <div class="filter-chip-row" role="group" aria-label="Filter blog posts by category">
+          <button type="button" class="filter-chip active" data-filter="all">All</button>
+          <button type="button" class="filter-chip" data-filter="ai">AI</button>
+          <button type="button" class="filter-chip" data-filter="debugging">Debugging</button>
+          <button type="button" class="filter-chip" data-filter="logs">Logs</button>
+        </div>
 
-<svg width="34" height="34" viewBox="0 0 100 100">
-<rect width="100" height="100" rx="20" fill="#6366F1"/>
-<path d="M25 50 L45 65 L45 35 Z" fill="white"/>
-<rect x="55" y="60" width="20" height="6" fill="white"/>
-</svg>
+        <div class="row g-4">
+          <div class="col-12 col-md-6" data-post-card data-category="ai debugging logs">
+            <article class="glass-card h-100">
+              <h3 class="feature-title">How to Debug Faster Using AI Log Analysis</h3>
+              <div class="meta-row"><span><i class="bi bi-calendar-event"></i>Mar 29, 2026</span><span><i class="bi bi-clock"></i>7 min read</span></div>
+              <p class="muted">Learn a repeatable workflow for using AI to pinpoint root causes in minutes instead of hours.</p>
+              <div class="tag-list"><span class="tag"><i class="bi bi-cpu"></i>AI</span><span class="tag"><i class="bi bi-bug"></i>Debugging</span><span class="tag"><i class="bi bi-file-text"></i>Logs</span></div>
+              <a href="blog-debug-faster-ai.html" class="btn-ghost-glow">Read More <i class="bi bi-arrow-up-right"></i></a>
+            </article>
+          </div>
 
-<span>LogSense</span>
+          <div class="col-12 col-md-6" data-post-card data-category="debugging">
+            <article class="glass-card h-100">
+              <h3 class="feature-title">Top 10 Common Errors Developers Face</h3>
+              <div class="meta-row"><span><i class="bi bi-calendar-event"></i>Mar 27, 2026</span><span><i class="bi bi-clock"></i>8 min read</span></div>
+              <p class="muted">A practical list of recurring production errors and how to troubleshoot them quickly with context.</p>
+              <div class="tag-list"><span class="tag"><i class="bi bi-exclamation-circle"></i>Errors</span><span class="tag"><i class="bi bi-bug"></i>Debugging</span></div>
+              <a href="blog-top-10-errors.html" class="btn-ghost-glow">Read More <i class="bi bi-arrow-up-right"></i></a>
+            </article>
+          </div>
 
-</div>
+          <div class="col-12 col-md-6" data-post-card data-category="logs">
+            <article class="glass-card h-100">
+              <h3 class="feature-title">Why Logs Matter More Than You Think</h3>
+              <div class="meta-row"><span><i class="bi bi-calendar-event"></i>Mar 24, 2026</span><span><i class="bi bi-clock"></i>6 min read</span></div>
+              <p class="muted">Understand why high-quality logs are the foundation of reliability, observability, and faster fixes.</p>
+              <div class="tag-list"><span class="tag"><i class="bi bi-file-text"></i>Logs</span><span class="tag"><i class="bi bi-graph-up"></i>Reliability</span></div>
+              <a href="blog-why-logs-matter.html" class="btn-ghost-glow">Read More <i class="bi bi-arrow-up-right"></i></a>
+            </article>
+          </div>
 
-<div class="nav-links">
+          <div class="col-12 col-md-6" data-post-card data-category="logs debugging">
+            <article class="glass-card h-100">
+              <h3 class="feature-title">Understanding Logs Like a Pro</h3>
+              <div class="meta-row"><span><i class="bi bi-calendar-event"></i>Mar 21, 2026</span><span><i class="bi bi-clock"></i>9 min read</span></div>
+              <p class="muted">Build a mental model for parsing event streams, spotting anomalies, and extracting signal from noise.</p>
+              <div class="tag-list"><span class="tag"><i class="bi bi-terminal"></i>Terminal</span><span class="tag"><i class="bi bi-file-text"></i>Logs</span></div>
+              <a href="blog-understanding-logs-pro.html" class="btn-ghost-glow">Read More <i class="bi bi-arrow-up-right"></i></a>
+            </article>
+          </div>
 
-<a href="index.html">Home</a>
-<a href="pricing.html">Pricing</a>
-<a href="downloads.html">Downloads</a>
-<a href="contact.html">Contact</a>
+          <div class="col-12 col-md-6" data-post-card data-category="debugging">
+            <article class="glass-card h-100">
+              <h3 class="feature-title">Beginner's Guide to Debugging</h3>
+              <div class="meta-row"><span><i class="bi bi-calendar-event"></i>Mar 19, 2026</span><span><i class="bi bi-clock"></i>10 min read</span></div>
+              <p class="muted">A step-by-step starter framework to debug confidently even if you are new to backend incidents.</p>
+              <div class="tag-list"><span class="tag"><i class="bi bi-book"></i>Beginner</span><span class="tag"><i class="bi bi-bug"></i>Debugging</span></div>
+              <a href="blog-beginners-guide-debugging.html" class="btn-ghost-glow">Read More <i class="bi bi-arrow-up-right"></i></a>
+            </article>
+          </div>
 
-</div>
+          <div class="col-12 col-md-6" data-post-card data-category="ai debugging">
+            <article class="glass-card h-100">
+              <h3 class="feature-title">How LogSense Saves Time</h3>
+              <div class="meta-row"><span><i class="bi bi-calendar-event"></i>Mar 16, 2026</span><span><i class="bi bi-clock"></i>7 min read</span></div>
+              <p class="muted">See where engineering time gets recovered with automated clustering and AI-assisted root-cause hints.</p>
+              <div class="tag-list"><span class="tag"><i class="bi bi-stopwatch"></i>Productivity</span><span class="tag"><i class="bi bi-cpu"></i>AI</span></div>
+              <a href="blog-how-logsense-saves-time.html" class="btn-ghost-glow">Read More <i class="bi bi-arrow-up-right"></i></a>
+            </article>
+          </div>
 
-</nav>
+          <div class="col-12 col-md-6" data-post-card data-category="logs">
+            <article class="glass-card h-100">
+              <h3 class="feature-title">Writing Better Logs</h3>
+              <div class="meta-row"><span><i class="bi bi-calendar-event"></i>Mar 14, 2026</span><span><i class="bi bi-clock"></i>6 min read</span></div>
+              <p class="muted">Improve your log quality with practical conventions that make incident triage dramatically easier.</p>
+              <div class="tag-list"><span class="tag"><i class="bi bi-pencil-square"></i>Best Practices</span><span class="tag"><i class="bi bi-file-text"></i>Logs</span></div>
+              <a href="blog-writing-better-logs.html" class="btn-ghost-glow">Read More <i class="bi bi-arrow-up-right"></i></a>
+            </article>
+          </div>
 
-</div>
+          <div class="col-12 col-md-6" data-post-card data-category="debugging logs">
+            <article class="glass-card h-100">
+              <h3 class="feature-title">Real Debugging Case Studies</h3>
+              <div class="meta-row"><span><i class="bi bi-calendar-event"></i>Mar 10, 2026</span><span><i class="bi bi-clock"></i>11 min read</span></div>
+              <p class="muted">Real incident narratives that show how teams move from alert to verified fix using structured logs.</p>
+              <div class="tag-list"><span class="tag"><i class="bi bi-clipboard-data"></i>Case Study</span><span class="tag"><i class="bi bi-bug"></i>Debugging</span></div>
+              <a href="blog-real-debugging-case-studies.html" class="btn-ghost-glow">Read More <i class="bi bi-arrow-up-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</header>
+  <footer class="footer-wrap">
+    <div class="container">
+      <a class="footer-brand" href="index.html" aria-label="LogSense home">
+        <img src="assets/logo.svg" class="footer-logo" alt="LogSense logo">
+      </a>
+      <p class="mb-1">AI-Powered Log Analysis</p>
+      <p class="mb-0">LogSense &copy; 2026. Understand Your Logs Instantly.</p>
+    </div>
+  </footer>
 
-
-<section class="blog-header">
-
-<div class="container">
-
-<h1>LogSense Blog</h1>
-
-<p>Updates, development logs, and engineering insights.</p>
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="container">
-
-<!-- POST 1 -->
-
-<div class="post">
-
-<div class="post-title">
-Building LogSense: Why I Created a Log Analysis Tool
-</div>
-
-<div class="post-meta">
-Published by Kugan • 2026
-</div>
-
-<p>
-When working on software projects, one of the most frustrating things
-is trying to understand huge log files. Sometimes logs contain thousands
-or even millions of lines, and finding the real problem inside them can
-take a lot of time.
-</p>
-
-<p>
-I built LogSense to solve this problem. The idea was simple: create a
-tool that could quickly scan large logs, detect errors, and group them
-so developers can understand what went wrong much faster.
-</p>
-
-<p>
-Instead of manually searching through logs, LogSense automatically
-analyzes the file, counts errors, clusters similar issues, and highlights
-the most important failures.
-</p>
-
-<p>
-The goal is to make debugging faster and help developers focus on fixing
-problems instead of digging through endless log lines.
-</p>
-
-<p>
-This blog will be where I share updates about LogSense, new features,
-development progress, and ideas for improving developer tooling.
-</p>
-
-</div>
-
-
-<!-- POST 2 -->
-
-<div class="post">
-
-<div class="post-title">
-Preparing LogSense for Its First Release
-</div>
-
-<div class="post-meta">
-Published by Kugan • 2026
-</div>
-
-<p>
-After building the core features of LogSense, the next step was preparing
-it for its first public release. This meant improving stability,
-cleaning up the codebase, and testing the tool with real-world logs.
-</p>
-
-<p>
-Large log files can contain thousands of lines and many repeated errors.
-One of the main goals before release was improving how LogSense groups
-similar errors so developers can immediately see the most important
-issues.
-</p>
-
-<p>
-Performance was also a major focus. LogSense is designed to scan large
-logs quickly, so optimizing the parsing and analysis engine was
-important before releasing the tool publicly.
-</p>
-
-<p>
-Alongside development, work also went into the website, documentation,
-and making it easy for developers to download and try LogSense.
-</p>
-
-<p>
-The first release is just the beginning. Future updates will continue
-improving the analysis engine and adding more features to help
-developers debug faster.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-LogSense — Find the signal in the noise  
-© 2026 LogSense
-
-</footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
-```

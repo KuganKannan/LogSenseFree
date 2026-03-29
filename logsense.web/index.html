@@ -1,693 +1,112 @@
-```html
-<!DOCTYPE html>
+﻿w<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>LogSense — Intelligent Log Analysis</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-margin:0;
-font-family:'Inter',sans-serif;
-background:#020617;
-color:#e2e8f0;
-padding-top:90px;
-}
-
-/* Layout */
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:0 20px;
-}
-
-/* Navbar */
-
-header{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(2,6,23,0.9);
-backdrop-filter:blur(12px);
-border-bottom:1px solid #1e293b;
-z-index:1000;
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 0;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:600;
-font-size:18px;
-}
-
-.nav-links a{
-color:#cbd5e1;
-text-decoration:none;
-margin-left:24px;
-font-size:14px;
-position:relative;
-transition:color .25s;
-}
-
-.nav-links a:hover{
-color:white;
-}
-
-/* underline animation */
-
-.nav-links a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-6px;
-width:0%;
-height:2px;
-background:#6366f1;
-transition:width .25s ease;
-}
-
-.nav-links a:hover::after{
-width:100%;
-}
-
-/* Hero */
-
-.hero{
-padding:120px 0;
-text-align:center;
-}
-
-.hero h1{
-font-size:52px;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:650px;
-margin:auto;
-color:#94a3b8;
-font-size:18px;
-}
-
-/* Buttons */
-
-.buttons{
-margin-top:30px;
-}
-
-.btn{
-padding:14px 28px;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-margin:8px;
-display:inline-block;
-}
-
-.primary{
-background:#6366f1;
-color:white;
-}
-
-.primary:hover{
-background:#4f46e5;
-}
-
-.secondary{
-border:1px solid #334155;
-color:white;
-}
-
-/* Terminal */
-
-.terminal{
-background:#010409;
-border:1px solid #1e293b;
-border-radius:12px;
-margin-top:40px;
-max-width:650px;
-margin-left:auto;
-margin-right:auto;
-overflow:hidden;
-box-shadow:0 10px 40px rgba(0,0,0,0.5);
-}
-
-.terminal-header{
-display:flex;
-align-items:center;
-gap:8px;
-padding:10px 14px;
-background:#020617;
-border-bottom:1px solid #1e293b;
-}
-
-.dot{
-width:10px;
-height:10px;
-border-radius:50%;
-}
-
-.red{background:#ff5f56;}
-.yellow{background:#ffbd2e;}
-.green{background:#27c93f;}
-
-.terminal-title{
-margin-left:10px;
-font-size:13px;
-color:#94a3b8;
-}
-
-#terminal-text{
-color:#22c55e;
-font-family:monospace;
-padding:22px;
-font-size:14px;
-line-height:1.6;
-white-space:pre-wrap;
-}
-
-/* Stats Section */
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:40px;
-text-align:center;
-margin-top:40px;
-}
-
-.stat{
-border:1px solid #1e293b;
-padding:40px 20px;
-border-radius:12px;
-background:#020617;
-}
-
-.stat-number{
-font-size:48px;
-font-weight:700;
-color:#6366f1;
-margin-bottom:10px;
-}
-
-.stat-label{
-color:#94a3b8;
-font-size:16px;
-}
-
-/* Sections */
-
-.section{
-padding:90px 0;
-}
-
-.section-title{
-text-align:center;
-font-size:34px;
-margin-bottom:60px;
-}
-
-/* Grid */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:30px;
-}
-
-.card{
-border:1px solid #1e293b;
-padding:28px;
-border-radius:12px;
-background:#020617;
-transition:.25s;
-}
-
-.card:hover{
-border-color:#6366f1;
-transform:translateY(-5px);
-}
-
-/* Usage cards */
-
-.usage{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-/* Workflow */
-
-.workflow{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:30px;
-}
-
-.workflow-step{
-border:1px solid #1e293b;
-padding:26px;
-border-radius:12px;
-}
-
-/* Developer */
-
-.developer-card{
-max-width:420px;
-margin:auto;
-text-align:center;
-border:1px solid #1e293b;
-padding:30px;
-border-radius:14px;
-}
-
-.developer-photo{
-width:140px;
-height:140px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:20px;
-}
-
-/* Footer */
-
-footer{
-text-align:center;
-padding:50px 0;
-border-top:1px solid #1e293b;
-color:#64748b;
-margin-top:60px;
-}
-
-.logo:hover{
-transform:scale(1.03);
-transition:.2s;
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogSense | AI-Powered Log Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<header>
-
-<div class="container">
-
-<nav>
-
-<div class="logo">
-
-<svg width="34" height="34" viewBox="0 0 100 100">
-<rect width="100" height="100" rx="20" fill="#6366F1"/>
-<path d="M25 50 L45 65 L45 35 Z" fill="white"/>
-<rect x="55" y="60" width="20" height="6" fill="white"/>
-</svg>
-
-<span>LogSense</span>
-
-</div>
-
-<div class="nav-links">
-
-<a href="#features">Features</a>
-<a href="#developers">Developers</a>
-<a href="#about">About</a>
-<a href="https://github.com/KuganKannan/LogSenseFree/tree/main">GitHub</a>
-<a href="pricing.html">Pricing</a>
-<a href="changelog.html">Changelog</a>
-<a href="contactus.html">Contact Us</a>
-<a href="Blog.html">Blog</a>
-
-</div>
-
-</nav>
-
-</div>
-
-</header>
-
-
-<section class="hero">
-
-<div class="container">
-
-<h1>Understand Your Logs Instantly</h1>
-
-<p>
-LogSense helps developers analyze massive log files, detect recurring failures,
-and identify the root cause of system issues in seconds.
-</p>
-
-<div class="buttons">
-
-<a class="btn primary" href="downloads.html">Get Started</a>
-<a class="btn secondary" href="https://github.com/KuganKannan">View on GitHub</a>
-
-</div>
-
-<div class="terminal">
-
-<div class="terminal-header">
-<div class="dot red"></div>
-<div class="dot yellow"></div>
-<div class="dot green"></div>
-<span class="terminal-title">logsense</span>
-</div>
-
-<pre id="terminal-text"></pre>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<div class="container">
-
-<div class="stats">
-
-<div class="stat">
-<div class="stat-number" data-target="1200000">0</div>
-<div class="stat-label">Log lines analyzed</div>
-</div>
-
-<div class="stat">
-<div class="stat-number" data-target="93">0</div>
-<div class="stat-label">Faster debugging</div>
-</div>
-
-<div class="stat">
-<div class="stat-number" data-target="0.3">0</div>
-<div class="stat-label">Average analysis time</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section" id="features">
-
-<div class="container">
-
-<h2 class="section-title">Features</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Instant Log Analysis</h3>
-<p>Analyze logs with a single CLI command.</p>
-</div>
-
-<div class="card">
-<h3>Error Clustering</h3>
-<p>Group thousands of stack traces into meaningful issues.</p>
-</div>
-
-<div class="card">
-<h3>Root Cause Detection</h3>
-<p>Find the first failure in seconds.</p>
-</div>
-
-<div class="card">
-<h3>Large Log Support</h3>
-<p>Handles massive log files efficiently.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section" id="developers">
-
-<div class="container">
-
-<h2 class="section-title">Built for Developers</h2>
-
-<div class="usage">
-
-<div class="card">
-<h3>Debug Production Faster</h3>
-<p>Quickly understand failures in production environments.</p>
-</div>
-
-<div class="card">
-<h3>Microservice Observability</h3>
-<p>Analyze distributed system logs easily.</p>
-</div>
-
-<div class="card">
-<h3>Incident Investigation</h3>
-<p>Identify critical failures during incidents.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section" id="workflow">
-
-<div class="container">
-
-<h2 class="section-title">Developer Workflow</h2>
-
-<div class="workflow">
-
-<div class="workflow-step">
-<h3>1. Collect Logs</h3>
-<p>Export logs from your application or server.</p>
-</div>
-
-<div class="workflow-step">
-<h3>2. Run LogSense</h3>
-<p>Run the LogSense CLI to analyze the logs.</p>
-</div>
-
-<div class="workflow-step">
-<h3>3. Find Root Cause</h3>
-<p>Instantly identify the most important errors.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<div class="container">
-
-<h2 class="section-title">Meet the Creator</h2>
-
-<div class="developer-card">
-
-<img src="assets/kugan.jpg" class="developer-photo">
-
-<h3>Kugan</h3>
-
-<p>Main Developer of LogSense</p>
-
-<p>
-Building tools that help developers understand complex systems.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-```html
-<section class="section">
-
-<div class="container">
-
-<h2 class="section-title">Questions?</h2>
-
-<div class="faq-preview">
-
-<p>
-Have questions about LogSense, how it works, or what the Pro version includes?
-Check out the Frequently Asked Questions page.
-</p>
-
-<a class="faq-button" href="faqs.html">
-View FAQs
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<style>
-
-.faq-preview{
-text-align:center;
-max-width:600px;
-margin:auto;
-border:1px solid #1e293b;
-padding:40px;
-border-radius:14px;
-background:#020617;
-}
-
-.faq-preview p{
-color:#94a3b8;
-font-size:16px;
-margin-bottom:25px;
-line-height:1.6;
-}
-
-.faq-button{
-display:inline-block;
-background:#6366f1;
-color:white;
-padding:14px 26px;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-transition:.25s;
-}
-
-.faq-button:hover{
-background:#4f46e5;
-transform:translateY(-2px);
-}
-
-</style>
-```
-
-
-
-<footer>
-
-LogSense — Find the signal in the noise  
-© 2026 LogSense
-
-</footer>
-
-
-<script>
-
-const text =
-`$ logsense app.log
-
---------------------------------
-LOGSENSE ANALYSIS
---------------------------------
-
-Lines scanned: 12,043
-Errors found: 245
-
-Top Issues
-
-1. NullPointerException .......... 128
-2. DatabaseTimeoutException ...... 107
-3. ConnectionResetException ..... 10
-
-Analysis Complete ✔
-`;
-
-let i = 0;
-
-function typeWriter(){
-if(i < text.length){
-document.getElementById("terminal-text").textContent += text.charAt(i);
-i++;
-setTimeout(typeWriter,25);
-}
-}
-
-typeWriter();
-
-/* Stats animation */
-
-const stats = document.querySelectorAll(".stat-number");
-
-const observer = new IntersectionObserver(entries => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-
-const el = entry.target;
-const target = parseFloat(el.dataset.target);
-let count = 0;
-
-const speed = target / 80;
-
-function update(){
-
-count += speed;
-
-if(count < target){
-
-if(target === 1200000){
-el.textContent = Math.floor(count).toLocaleString()+"+";
-}else if(target === 93){
-el.textContent = Math.floor(count)+"%";
-}else{
-el.textContent = count.toFixed(1)+"s";
-}
-
-requestAnimationFrame(update);
-
-}else{
-
-if(target === 1200000) el.textContent="1,200,000+";
-if(target === 93) el.textContent="93%";
-if(target === 0.3) el.textContent="0.3s";
-
-}
-
-}
-
-update();
-
-observer.unobserve(el);
-
-}
-
-});
-
-});
-
-stats.forEach(stat => observer.observe(stat));
-
-</script>
-
+  <header class="navbar-wrap">
+    <div class="container">
+      <nav class="navbar-shell">
+        <a class="brand-mark" href="index.html" aria-label="LogSense home">
+          <img src="assets/logo.svg" class="brand-logo" alt="LogSense logo">
+        </a>
+        <div class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="docs.html">Docs</a>
+          <a href="downloads.html">Downloads</a>
+          <a href="blog.html">Blog</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contactus.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero reveal">
+      <div class="container">
+        <h1><span class="hero-glow">Understand Your Logs Instantly</span></h1>
+        <p>LogSense uses AI-powered log analysis to detect anomalies, cluster recurring errors, and surface root-cause signals in seconds.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+          <a class="btn-primary-glow" href="downloads.html"><i class="bi bi-download"></i> Download LogSense</a>
+          <a class="btn-ghost-glow" href="docs.html"><i class="bi bi-journal-code"></i> View Docs</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Built for Fast Debugging Teams</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <article class="glass-card h-100">
+              <div class="icon-badge"><i class="bi bi-terminal-fill"></i></div>
+              <h3 class="feature-title">AI Log Parsing</h3>
+              <p class="muted mb-0">Parse huge log streams quickly and identify structural patterns across services.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-4">
+            <article class="glass-card h-100">
+              <div class="icon-badge"><i class="bi bi-exclamation-triangle-fill"></i></div>
+              <h3 class="feature-title">Error Detection</h3>
+              <p class="muted mb-0">Catch critical failures early with confidence-ranked incident indicators.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-4">
+            <article class="glass-card h-100">
+              <div class="icon-badge"><i class="bi bi-graph-up-arrow"></i></div>
+              <h3 class="feature-title">Actionable Insights</h3>
+              <p class="muted mb-0">Convert noisy logs into timelines, top issues, and practical next-step recommendations.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="glass-card cta-strip">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-lg-7">
+              <h2 class="mb-3">AI-Powered Log Analysis, Ready Now</h2>
+              <p class="muted mb-4">Install LogSense and reduce time-to-root-cause with a terminal-inspired workflow built for modern engineering teams.</p>
+              <a class="btn-primary-glow" href="downloads.html"><i class="bi bi-arrow-right-circle"></i> Get Started</a>
+            </div>
+            <div class="col-12 col-lg-5">
+              <div class="code-block">
+$ logsense analyze production.log
+
+Lines scanned: 1842031
+Issues clustered: 19
+Critical alerts: 4
+Likely root cause: TimeoutException
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-wrap">
+    <div class="container">
+      <a class="footer-brand" href="index.html" aria-label="LogSense home">
+        <img src="assets/logo.svg" class="footer-logo" alt="LogSense logo">
+      </a>
+      <p class="mb-1">AI-Powered Log Analysis</p>
+      <p class="mb-0">LogSense &copy; 2026. Understand Your Logs Instantly.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
-```

@@ -1,0 +1,29 @@
+<svg width="220" height="64" viewBox="0 0 220 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ls-bg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D084"/>
+      <stop offset="1" stop-color="#3EA7FF"/>
+    </linearGradient>
+    <linearGradient id="ls-text" x1="70" y1="16" x2="206" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DBF7FF"/>
+      <stop offset="1" stop-color="#88E7FF"/>
+    </linearGradient>
+    <filter id="ls-glow" x="0" y="0" width="76" height="76" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#ls-glow)">
+    <rect x="8" y="8" width="48" height="48" rx="13" fill="#071325"/>
+    <rect x="8.75" y="8.75" width="46.5" height="46.5" rx="12.25" stroke="url(#ls-bg)" stroke-opacity="0.9"/>
+    <path d="M18 24L26 32L18 40" stroke="url(#ls-bg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M30 41H42" stroke="#8EF4D0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M33 22V18" stroke="#3EA7FF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M37 22V16" stroke="#3EA7FF" stroke-width="2" stroke-linecap="round"/>
+    <path d="M41 22V19" stroke="#3EA7FF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <text x="70" y="41" fill="url(#ls-text)" font-size="30" font-family="Poppins, Inter, sans-serif" font-weight="700" letter-spacing="0.4">LogSense</text>
+</svg>
